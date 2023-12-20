@@ -10,7 +10,6 @@ import Combine
 
 class ViewModel: AlertViewModel, ObservableObject {
     
-    @Published var loading: Bool = false
     @Published var showAlert: Bool = false
     @Published var alertMessage: String = ""
     
@@ -28,8 +27,6 @@ class ViewModel: AlertViewModel, ObservableObject {
     }
     
     @MainActor func getBrands() {
-        loading = true
-        
         Task {
             do {
                 let result = try await manager.fetchBrands()
@@ -37,15 +34,10 @@ class ViewModel: AlertViewModel, ObservableObject {
             } catch let error as NetworkError {
                 self.makeNetworkAlert(with: error, message: &alertMessage, alert: &showAlert)
             }
-            
-            if !Task.isCancelled {
-                loading = false
-            }
         }
     }
     
     @MainActor func getBrandModels(id: String) {
-        loading = true
         Task {
             
             do {
@@ -53,10 +45,6 @@ class ViewModel: AlertViewModel, ObservableObject {
                 self.models = result.models.map(ModelViewModel.init)
             } catch let error as NetworkError {
                 self.makeNetworkAlert(with: error, message: &alertMessage, alert: &showAlert)
-            }
-            
-            if !Task.isCancelled {
-                loading = false
             }
         }
     }
