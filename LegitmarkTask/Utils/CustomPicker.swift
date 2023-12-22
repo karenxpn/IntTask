@@ -16,6 +16,7 @@ extension ModelViewModel: NameDisplayable {}
 
 struct CustomPicker<T: Identifiable & Hashable & NameDisplayable>: View {
     @Binding var selectedItem: T?
+    let loading: Bool
     let items: [T]
     let disabled: Bool
     let placeholder: String
@@ -33,9 +34,13 @@ struct CustomPicker<T: Identifiable & Hashable & NameDisplayable>: View {
             }
         } label: {
             HStack {
-                Text(selectedItem == nil ? placeholder : selectedItem!.name)
-                    .foregroundColor(selectedItem == nil ? .gray : .black)
-                    .font(.system(size: 16))
+                if loading {
+                    ProgressView()
+                } else {
+                    Text(selectedItem == nil ? placeholder : selectedItem!.name)
+                        .foregroundColor(selectedItem == nil ? .gray : .black)
+                        .font(.system(size: 16))
+                }
 
                 Spacer()
 

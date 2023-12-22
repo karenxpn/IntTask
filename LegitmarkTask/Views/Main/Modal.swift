@@ -22,6 +22,7 @@ struct Modal: View {
                 
                 // pickers
                 CustomPicker(selectedItem: $viewModel.selectedBrand,
+                             loading: viewModel.loadingBrands,
                              items: viewModel.brands,
                              disabled: viewModel.brands.isEmpty,
                              placeholder: "Brand") { brand in
@@ -31,6 +32,7 @@ struct Modal: View {
                 }
                 
                 CustomPicker(selectedItem: $viewModel.selectedModel,
+                             loading: viewModel.loadingModels,
                              items: viewModel.models,
                              disabled: viewModel.models.isEmpty || viewModel.selectedBrand == nil,
                              placeholder: "Model") { _ in
