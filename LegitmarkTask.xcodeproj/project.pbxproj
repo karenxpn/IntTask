@@ -31,8 +31,7 @@
 		FF84B8AB2B323CB600342308 /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84B8AA2B323CB600342308 /* Modal.swift */; };
 		FF84B8AD2B32D5E200342308 /* TextFieldHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84B8AC2B32D5E200342308 /* TextFieldHelper.swift */; };
 		FF84B8AF2B32D76100342308 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84B8AE2B32D76100342308 /* Extensions.swift */; };
-		FF84B8B12B32E3BF00342308 /* CustomBrandPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84B8B02B32E3BF00342308 /* CustomBrandPicker.swift */; };
-		FF84B8B32B32E4EB00342308 /* CustomModelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84B8B22B32E4EB00342308 /* CustomModelPicker.swift */; };
+		FF84B8B12B32E3BF00342308 /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84B8B02B32E3BF00342308 /* CustomPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,8 +60,7 @@
 		FF84B8AA2B323CB600342308 /* Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
 		FF84B8AC2B32D5E200342308 /* TextFieldHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldHelper.swift; sourceTree = "<group>"; };
 		FF84B8AE2B32D76100342308 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		FF84B8B02B32E3BF00342308 /* CustomBrandPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBrandPicker.swift; sourceTree = "<group>"; };
-		FF84B8B22B32E4EB00342308 /* CustomModelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModelPicker.swift; sourceTree = "<group>"; };
+		FF84B8B02B32E3BF00342308 /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +155,7 @@
 				FF84B8A22B323A3800342308 /* ButtonHelper.swift */,
 				FF84B8AC2B32D5E200342308 /* TextFieldHelper.swift */,
 				FF84B8AE2B32D76100342308 /* Extensions.swift */,
-				FF84B8B02B32E3BF00342308 /* CustomBrandPicker.swift */,
-				FF84B8B22B32E4EB00342308 /* CustomModelPicker.swift */,
+				FF84B8B02B32E3BF00342308 /* CustomPicker.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -274,7 +271,7 @@
 				FF84B88E2B32381800342308 /* LoginModel.swift in Sources */,
 				FF84B8872B32369C00342308 /* NetworkError.swift in Sources */,
 				FF84B8982B3238A300342308 /* AlertViewModel.swift in Sources */,
-				FF84B8B12B32E3BF00342308 /* CustomBrandPicker.swift in Sources */,
+				FF84B8B12B32E3BF00342308 /* CustomPicker.swift in Sources */,
 				FF84B8A12B3239FA00342308 /* TextHelper.swift in Sources */,
 				FF84B8AD2B32D5E200342308 /* TextFieldHelper.swift in Sources */,
 				FF84B8A52B323B5F00342308 /* Authentication.swift in Sources */,
@@ -287,7 +284,6 @@
 				FF84B89A2B32391E00342308 /* AuthViewModel.swift in Sources */,
 				FF84B8922B32385E00342308 /* Brand.swift in Sources */,
 				FF84B8702B32359700342308 /* LegitmarkTaskApp.swift in Sources */,
-				FF84B8B32B32E4EB00342308 /* CustomModelPicker.swift in Sources */,
 				FF84B88C2B3237F000342308 /* AuthModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

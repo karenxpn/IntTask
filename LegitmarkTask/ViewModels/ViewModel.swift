@@ -31,6 +31,7 @@ class ViewModel: AlertViewModel, ObservableObject {
             do {
                 let result = try await manager.fetchBrands()
                 self.brands = result.brands.map(BrandViewModel.init)
+                print(self.brands)
             } catch let error as NetworkError {
                 self.makeNetworkAlert(with: error, message: &alertMessage, alert: &showAlert)
             }

@@ -21,18 +21,21 @@ struct Modal: View {
                     .fontWeight(.semibold)
                 
                 // pickers
-                CustomBrandPicker(selection: $viewModel.selectedBrand,
-                                  brands: viewModel.brands,
-                                  disabled: viewModel.brands.isEmpty, placeholder: "Brand") { brand in
+                CustomPicker(selectedItem: $viewModel.selectedBrand,
+                             items: viewModel.brands,
+                             disabled: viewModel.brands.isEmpty,
+                             placeholder: "Brand") { brand in
                     if let id = brand?.id {
                         viewModel.getBrandModels(id: id)
                     }
                 }
                 
-                
-                CustomModelPicker(selection: $viewModel.selectedModel,
-                                  models: viewModel.models,
-                                  disabled: viewModel.models.isEmpty || viewModel.selectedBrand == nil, placeholder: "Model")
+                CustomPicker(selectedItem: $viewModel.selectedModel,
+                             items: viewModel.models,
+                             disabled: viewModel.models.isEmpty || viewModel.selectedBrand == nil,
+                             placeholder: "Model") { _ in
+                    
+                }
                 //optional textfields
                 
                 TextFieldHelper(placeholder: "Style (Optional)",
